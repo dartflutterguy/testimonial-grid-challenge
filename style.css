@@ -1,0 +1,157 @@
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Barlow Semi Condensed', Sans-Serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+}
+#container {
+    padding: 8% 4%;
+}
+.grid-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#card-1 {
+    background-color: #7541c8;
+    color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20%) top;
+
+}
+#card-2 {
+    background-color: #48556a;
+    color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+}
+#card-3 {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+}
+#card-4 {
+    background-color: #19212e;
+    color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+}
+#card-5 {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+}
+.profile {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.profile-pic-with-border {
+    border-radius: 100%;
+    border: 2px solid #9872d5;
+    width: 40px;
+    height: 40px;
+}
+.profile-pic-without-border {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+.profile-pic {
+    margin-right: 15px;
+}
+.profile-name {
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+#card-3 .name, #card-5 .name {
+    color: #48556a;
+    font-weight: 600;
+}
+.graduate {
+    margin-top: 2px;
+    color: #ffffff;
+    opacity: 50%;
+    font-size: 0.7rem;
+}
+#card-3 .graduate, #card-5 .graduate {
+    color: #19212e;
+    opacity: 60%;
+    font-size: 0.7rem;
+}
+h4 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+   
+}
+.header-white-bg {
+    color: #48556a;
+}
+.header {
+    color: #ffffff;
+    opacity: 90%;
+}
+.quote {
+    color: #ffffff;
+    opacity: 70%;
+    font-size: 0.9rem;
+}
+.quote-white-bg {
+    color: #19212e;
+    opacity: 70%;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+    /*refactor for all display flex property*/
+    #container,
+    #left-container,
+    #right-container,
+    #top-section,
+    #bottom-section {
+        display: flex;
+    }
+
+     /*refactor for all flex-basis property*/
+    #top-section, #bottom-section {
+        flex-basis: 50%;
+    }
+
+    #card-1,  #card-4 {
+        flex-basis: 70%;
+    }
+
+    #card-2, #card-3  {
+        flex-basis: 30%;
+    }
+
+    #container {
+        max-width: 1440px; /*card maintains this width*/
+        margin: 0 auto; /*card stays center of screen*/
+    }
+
+    #left-container {
+        flex-basis: 75%;
+        flex-direction: column;
+    }
+
+    #right-container {
+        flex-basis: 25%;
+    }
+
+    #left-container .grid-item {
+        margin-right: 15px;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+}
